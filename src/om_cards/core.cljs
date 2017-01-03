@@ -4,6 +4,7 @@
     [om.next :as om :refer-macros [defui]]
     [om.dom :as dom]
     [om-cards.ds :as ds]
+    [om-cards.remotes :as remotes]
     [om-cards.reconciliation :as rec]
     [datascript.core :as d]
     #_[om.core :as om :include-macros true]
@@ -60,6 +61,13 @@
   "REconciler"
   ds/AppRoot
   ds/reconciler
+  )
+
+(defcard-om-next
+  remotes-test
+  "Remotes"
+  remotes/AppRoot
+  remotes/reconciler
   )
 (defn main []
   ;; conditionally start the app based on whether the #main-app-area
