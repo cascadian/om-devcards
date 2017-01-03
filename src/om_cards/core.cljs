@@ -3,7 +3,9 @@
     [devcards-om-next.core :refer-macros [defcard-om-next om-next-root]]
     [om.next :as om :refer-macros [defui]]
     [om.dom :as dom]
+    [om-cards.tree :as tree]
     [om-cards.ds :as ds]
+    [om-cards.idents :as idents]
     [om-cards.remotes :as remotes]
     [om-cards.reconciliation :as rec]
     [datascript.core :as d]
@@ -68,6 +70,20 @@
   "Remotes"
   remotes/AppRoot
   remotes/reconciler
+  )
+
+(defcard-om-next
+  idents-test
+  "Idents as keys"
+  idents/AppRoot
+  idents/reconciler
+  )
+
+(defcard-om-next
+  tree-test
+  "Tree"
+  tree/AppRoot
+  tree/reconciler
   )
 (defn main []
   ;; conditionally start the app based on whether the #main-app-area
